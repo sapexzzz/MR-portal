@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "mr-portal",
+	"version": "${version}",
+	"name": "MR Portal",
+	"description": "Magic Rampage inspired portal staff with personal waypoints and portal visuals.",
+	"authors": [
+		"mentality"
+	],
+	"contact": {
+		"sources": "https://github.com/mentality/mr_portal"
+	},
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mentality.mrportal.MRPortal"
+		],
+		"client": [
+			"com.mentality.mrportal.MRPortalClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
