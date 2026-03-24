@@ -163,3 +163,4 @@ https://github.com/sapexzzz/MR-portal
 - changelog_1.4.md
 - changelog_1.5.md
 - changelog_1.6.md
+- changelog_1.7hotfix.md
