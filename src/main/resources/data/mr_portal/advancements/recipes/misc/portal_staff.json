@@ -1,0 +1,47 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_obsidian": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:obsidian"]
+					}
+				]
+			}
+		},
+		"has_ender_eye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:ender_eye"]
+					}
+				]
+			}
+		},
+		"has_nether_star": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:nether_star"]
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "mr_portal:portal_staff"
+			}
+		}
+	},
+	"requirements": [
+		["has_obsidian", "has_ender_eye", "has_nether_star", "has_the_recipe"]
+	],
+	"rewards": {
+		"recipes": ["mr_portal:portal_staff"]
+	}
+}
