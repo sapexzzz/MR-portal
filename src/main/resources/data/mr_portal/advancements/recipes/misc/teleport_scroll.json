@@ -1,0 +1,37 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_ender_pearl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:ender_pearl"]
+					}
+				]
+			}
+		},
+		"has_paper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:paper"]
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "mr_portal:teleport_scroll"
+			}
+		}
+	},
+	"requirements": [
+		["has_ender_pearl", "has_paper", "has_the_recipe"]
+	],
+	"rewards": {
+		"recipes": ["mr_portal:teleport_scroll"]
+	}
+}
