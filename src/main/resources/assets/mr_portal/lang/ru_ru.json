@@ -1,5 +1,5 @@
 {
-	"itemGroup.mr_portal.main": "MR Portal",
+	"itemGroup.mr_portal.main": "Mentalitys | MR Portal",
 	"item.mr_portal.portal_staff": "Посох портала",
 	"item.mr_portal.infinite_portal_staff": "Бесконечный посох портала",
 	"item.mr_portal.portal_staff.tooltip": "Тратит эндер-жемчуг и имеет перезарядку.",
@@ -11,8 +11,8 @@
 	"item.mr_portal.teleport_scroll.tooltip": "Одноразовый телепорт. Расходуется при использовании.",
 	"key.mr_portal.open_gui": "Открыть меню портала",
 	"key.mr_portal.quick_favorite_teleport": "Быстрый портал к избранной точке",
-	"category.mr_portal": "MR Portal",
-	"screen.mr_portal.title": "MR Portal",
+	"category.mr_portal": "Mentalitys | MR Portal",
+	"screen.mr_portal.title": "Mentalitys | MR Portal",
 	"screen.mr_portal.mode_survival": "Текущее измерение",
 	"screen.mr_portal.mode_creative": "Все измерения",
 	"screen.mr_portal.add": "Добавить",

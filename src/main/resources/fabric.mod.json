@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "mr-portal",
 	"version": "${version}",
-	"name": "MR Portal",
+	"name": "Mentalitys | MR Portal",
 	"description": "Magic Rampage inspired portal staff with personal waypoints and portal visuals.",
 	"authors": [
 		"mentality"

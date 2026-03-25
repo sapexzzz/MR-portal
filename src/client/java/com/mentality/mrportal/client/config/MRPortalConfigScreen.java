@@ -19,7 +19,7 @@ public final class MRPortalConfigScreen {
 
 		ConfigBuilder builder = ConfigBuilder.create()
 			.setParentScreen(parent)
-			.setTitle(Component.literal("MR Portal"))
+			.setTitle(Component.literal("Mentalitys | MR Portal"))
 			.setSavingRunnable(() -> {
 				MRPortalConfigManager.get().sanitize();
 				MRPortalConfigManager.save();

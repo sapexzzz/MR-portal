@@ -1,8 +1,8 @@
-# Mentalitys | MR Portal
+# MR Portal
 
-Mentalitys | MR Portal is a Fabric 1.20.1 mod that adds personal teleport portals and waypoints inspired by Magic Rampage.
+MR Portal is a Fabric 1.20.1 mod that adds personal teleport portals and waypoints inspired by Magic Rampage.
 
-Current version: 2.2.0
+Current version: 2.1.0
 
 ## Features
 
@@ -128,9 +128,9 @@ Main options:
 - quickFavoritePortalDelayTicks: delay before the quick favorite portal starts
 - portalExitBehindDistance: how far behind the player the destination portal appears after teleport
 
-Settings can be edited in-game via ModMenu → Mentalitys | MR Portal (requires Cloth Config API).
+Settings can be edited in-game via ModMenu → MR Portal (requires Cloth Config API).
 
-Default values in 2.2.0:
+Default values in 2.1.0:
 
 - cooldownSeconds = 60
 - maxWaypoints = 10
@@ -202,4 +202,3 @@ https://github.com/sapexzzz/MR-portal
 - changelog_1.9.md
 - changelog_2.0.md
 - changelog_2.1.md
-- changelog_2.2.md
