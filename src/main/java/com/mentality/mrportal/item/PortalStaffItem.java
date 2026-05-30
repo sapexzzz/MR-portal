@@ -42,7 +42,7 @@ public class PortalStaffItem extends Item {
 	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
 		ItemStack stack = player.getItemInHand(hand);
 		if (player instanceof ServerPlayer serverPlayer) {
-			MRPortalNetworking.sendWaypointScreen(serverPlayer, this.infinite || player.getAbilities().instabuild);
+			MRPortalNetworking.sendWaypointScreen(serverPlayer, this.infinite || player.getAbilities().instabuild, false);
 		}
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
 	}

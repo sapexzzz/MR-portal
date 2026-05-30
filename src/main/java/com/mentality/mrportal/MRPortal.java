@@ -1,8 +1,10 @@
 package com.mentality.mrportal;
 
+import com.mentality.mrportal.api.MRPortalApi;
 import com.mentality.mrportal.config.MRPortalConfigManager;
 import com.mentality.mrportal.item.MRPortalItems;
 import com.mentality.mrportal.network.MRPortalNetworking;
+import com.mentality.mrportal.portal.DefaultPortalTeleportHandler;
 import com.mentality.mrportal.portal.PendingTeleportManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -19,6 +21,7 @@ public class MRPortal implements ModInitializer {
 	public void onInitialize() {
 		MRPortalConfigManager.load();
 		MRPortalItems.register();
+		MRPortalApi.registerTeleportHandler(new DefaultPortalTeleportHandler());
 		MRPortalNetworking.registerServer();
 		ServerTickEvents.END_SERVER_TICK.register(PendingTeleportManager::tick);
 

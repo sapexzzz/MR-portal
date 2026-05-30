@@ -29,7 +29,7 @@ public class TeleportScrollItem extends Item {
 	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
 		ItemStack stack = player.getItemInHand(hand);
 		if (player instanceof ServerPlayer serverPlayer) {
-			MRPortalNetworking.sendWaypointScreen(serverPlayer, false);
+			MRPortalNetworking.sendWaypointScreen(serverPlayer, false, true);
 		}
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
 	}
