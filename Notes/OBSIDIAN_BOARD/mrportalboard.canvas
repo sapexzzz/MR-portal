@@ -1,0 +1,2158 @@
+{
+  "nodes": [
+    {
+      "id": "workspace-root",
+      "type": "text",
+      "text": "Workspace Root\n/home/mentality/scripts/java_minecraft_mod_prortal_from_mr",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 120
+    },
+    {
+      "id": "mr-portal-base",
+      "type": "text",
+      "text": "MR-portal base mod\nMR-portal/",
+      "x": 460,
+      "y": 0,
+      "width": 320,
+      "height": 120
+    },
+    {
+      "id": "base-notes",
+      "type": "text",
+      "text": "Base Notes Only\nMR-portal/Notes/",
+      "x": 460,
+      "y": 200,
+      "width": 320,
+      "height": 120
+    },
+    {
+      "id": "api-design",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/API_DESIGN.md",
+      "x": 860,
+      "y": 0,
+      "width": 360,
+      "height": 120
+    },
+    {
+      "id": "base-board-readme",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/README.md",
+      "x": 860,
+      "y": 200,
+      "width": 360,
+      "height": 120
+    },
+    {
+      "id": "base-phases",
+      "type": "text",
+      "text": "Base Workspace Phases\nMR-portal/Notes/OBSIDIAN_BOARD/PHASES/",
+      "x": 1260,
+      "y": 0,
+      "width": 400,
+      "height": 120
+    },
+    {
+      "id": "phase-workspace-01",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_WORKSPACE_01_CLEAN_PROJECT_ROOT.md",
+      "x": 1700,
+      "y": 0,
+      "width": 440,
+      "height": 120
+    },
+    {
+      "id": "phase-workspace-02",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_WORKSPACE_02_FIX_NOTES_LAYOUT.md",
+      "x": 1700,
+      "y": 180,
+      "width": 440,
+      "height": 120
+    },
+    {
+      "id": "base-reports",
+      "type": "text",
+      "text": "Base Reports\nMR-portal/Notes/REPORTS&AUDITS/",
+      "x": 1260,
+      "y": 380,
+      "width": 400,
+      "height": 120
+    },
+    {
+      "id": "phase01-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_WORKSPACE_01_CLEAN_PROJECT_ROOT_REPORT.md",
+      "x": 1700,
+      "y": 380,
+      "width": 460,
+      "height": 120
+    },
+    {
+      "id": "phase02-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_WORKSPACE_02_FIX_NOTES_LAYOUT_REPORT.md",
+      "x": 1700,
+      "y": 560,
+      "width": 460,
+      "height": 120
+    },
+    {
+      "id": "chrono-pointer",
+      "type": "text",
+      "text": "Chrono addon notes pointer\nFrom MR-portal/: ../Add-ons/Chrono/Notes/\nAddon design docs stay there.",
+      "x": 460,
+      "y": 400,
+      "width": 420,
+      "height": 140
+    },
+    {
+      "id": "phase-workspace-04-backup",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_WORKSPACE_04_CREATE_BASE_BACKUP.md",
+      "x": 1700,
+      "y": 740,
+      "width": 460,
+      "height": 120
+    },
+    {
+      "id": "phase04-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_WORKSPACE_04_CREATE_BASE_BACKUP_REPORT.md",
+      "x": 2220,
+      "y": 740,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "backup-folder",
+      "type": "text",
+      "text": "Frozen backup snapshot\nBackup-MR-portal-20260530-172501/\nDo not edit unless explicitly requested.",
+      "x": 1260,
+      "y": 740,
+      "width": 400,
+      "height": 140
+    },
+    {
+      "id": "phase-api-01-audit-teleport-flow",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_01_AUDIT_TELEPORT_FLOW.md",
+      "x": 1700,
+      "y": 940,
+      "width": 460,
+      "height": 120
+    },
+    {
+      "id": "api01-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_01_AUDIT_TELEPORT_FLOW_REPORT.md",
+      "x": 2220,
+      "y": 940,
+      "width": 540,
+      "height": 120
+    },
+    {
+      "id": "teleport-entry-points",
+      "type": "text",
+      "text": "Teleport Entry Points\nGUI staff, scroll, infinite/creative, open keybind, quick favorite keybind",
+      "x": 1260,
+      "y": 940,
+      "width": 400,
+      "height": 140
+    },
+    {
+      "id": "payment-cooldown-ownership",
+      "type": "text",
+      "text": "Payment/Cooldown Ownership\nBase MR-Portal keeps pearls, scroll consumption, cooldown, same-dimension rules.",
+      "x": 1260,
+      "y": 1120,
+      "width": 420,
+      "height": 140
+    },
+    {
+      "id": "quick-favorite-risk",
+      "type": "text",
+      "text": "Quick Favorite Risk\nDelayed activation must route through the future API path too.",
+      "x": 1700,
+      "y": 1120,
+      "width": 420,
+      "height": 120
+    },
+    {
+      "id": "preview-spark-lifecycle",
+      "type": "text",
+      "text": "Preview Spark Lifecycle\nOpen screen, local/remote spark, screen close, success removal, quick favorite preview.",
+      "x": 2220,
+      "y": 1120,
+      "width": 460,
+      "height": 140
+    },
+    {
+      "id": "phase-api-02-public-handler-api",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_02_PUBLIC_HANDLER_API.md",
+      "x": 1700,
+      "y": 1320,
+      "width": 480,
+      "height": 120
+    },
+    {
+      "id": "api02-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_02_PUBLIC_HANDLER_API_REPORT.md",
+      "x": 2220,
+      "y": 1320,
+      "width": 560,
+      "height": 120
+    },
+    {
+      "id": "mrportal-api-class",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/api/MRPortalApi.java",
+      "x": 1260,
+      "y": 1320,
+      "width": 400,
+      "height": 120
+    },
+    {
+      "id": "teleport-handler-class",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/api/MRPortalTeleportHandler.java",
+      "x": 1260,
+      "y": 1500,
+      "width": 430,
+      "height": 120
+    },
+    {
+      "id": "teleport-context-class",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/api/MRPortalTeleportContext.java",
+      "x": 1700,
+      "y": 1500,
+      "width": 430,
+      "height": 120
+    },
+    {
+      "id": "phase-build-01-java21-gradle-validation",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_BUILD_01_JAVA21_GRADLE_VALIDATION.md",
+      "x": 1700,
+      "y": 1680,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "build01-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_BUILD_01_JAVA21_GRADLE_VALIDATION_REPORT.md",
+      "x": 2260,
+      "y": 1680,
+      "width": 600,
+      "height": 120
+    },
+    {
+      "id": "java21-gradle-runtime",
+      "type": "text",
+      "text": "Java 21 Gradle Runtime\nJAVA_HOME=/usr/lib/jvm/java-21-openjdk\ncompileJava and compileClientJava pass.",
+      "x": 1260,
+      "y": 1680,
+      "width": 400,
+      "height": 140
+    },
+    {
+      "id": "default-portal-teleport-handler",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/portal/DefaultPortalTeleportHandler.java",
+      "x": 1260,
+      "y": 1880,
+      "width": 460,
+      "height": 120
+    },
+    {
+      "id": "phase-api-03-default-handler-registration",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_03_DEFAULT_HANDLER_REGISTRATION.md",
+      "x": 1760,
+      "y": 1880,
+      "width": 560,
+      "height": 120
+    },
+    {
+      "id": "api03-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_03_DEFAULT_HANDLER_REGISTRATION_REPORT.md",
+      "x": 2360,
+      "y": 1880,
+      "width": 640,
+      "height": 120
+    },
+    {
+      "id": "teleport-request-service-design",
+      "type": "text",
+      "text": "TeleportRequestService Design\nOwn request orchestration, validation, payment planning, context creation, and handler dispatch.",
+      "x": 1260,
+      "y": 2080,
+      "width": 460,
+      "height": 140
+    },
+    {
+      "id": "phase-api-04-teleport-request-service-design",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_04_TELEPORT_REQUEST_SERVICE_DESIGN.md",
+      "x": 1760,
+      "y": 2080,
+      "width": 600,
+      "height": 120
+    },
+    {
+      "id": "api04-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_04_TELEPORT_REQUEST_SERVICE_DESIGN_REPORT.md",
+      "x": 2400,
+      "y": 2080,
+      "width": 660,
+      "height": 120
+    },
+    {
+      "id": "payment-transaction-plan",
+      "type": "text",
+      "text": "Payment Transaction Plan\nPrecheck, canStart, commit payment/cooldown immediately before accepted execution.",
+      "x": 1260,
+      "y": 2280,
+      "width": 460,
+      "height": 140
+    },
+    {
+      "id": "quick-favorite-preservation",
+      "type": "text",
+      "text": "Quick Favorite Preservation\nQueue at keypress; revalidate and pay at delayed activation.",
+      "x": 1760,
+      "y": 2280,
+      "width": 460,
+      "height": 140
+    },
+    {
+      "id": "preview-spark-hook-plan",
+      "type": "text",
+      "text": "Preview Spark Hook\nusesDefaultPreviewSpark controls default GUI and quick preview spark lifecycle.",
+      "x": 2260,
+      "y": 2280,
+      "width": 500,
+      "height": 140
+    },
+    {
+      "id": "teleport-request-service-class",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/portal/TeleportRequestService.java",
+      "x": 1260,
+      "y": 2480,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "phase-api-05-request-service-skeleton",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_05_REQUEST_SERVICE_SKELETON.md",
+      "x": 1800,
+      "y": 2480,
+      "width": 580,
+      "height": 120
+    },
+    {
+      "id": "api05-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_05_REQUEST_SERVICE_SKELETON_REPORT.md",
+      "x": 2420,
+      "y": 2480,
+      "width": 640,
+      "height": 120
+    },
+    {
+      "id": "teleport-request-result-class",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/portal/TeleportRequestResult.java",
+      "x": 1260,
+      "y": 2660,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "teleport-payment-plan-class",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/portal/TeleportPaymentPlan.java",
+      "x": 1800,
+      "y": 2660,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "waypoint-data-view-class",
+      "type": "file",
+      "file": "MR-portal/src/main/java/com/mentality/mrportal/portal/WaypointDataView.java",
+      "x": 2340,
+      "y": 2660,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "paid-session-start-method",
+      "type": "text",
+      "text": "startPaidTeleportSession\nSession-only wrapper around existing startSession. No payment, scroll, item, or cooldown logic.",
+      "x": 1260,
+      "y": 2860,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "phase-api-06-extract-paid-session-start",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_06_EXTRACT_PAID_SESSION_START.md",
+      "x": 1820,
+      "y": 2860,
+      "width": 600,
+      "height": 120
+    },
+    {
+      "id": "api06-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_06_EXTRACT_PAID_SESSION_START_REPORT.md",
+      "x": 2460,
+      "y": 2860,
+      "width": 640,
+      "height": 120
+    },
+    {
+      "id": "default-handler-execution",
+      "type": "text",
+      "text": "Default Handler Execution\nUses internal WaypointDataView and calls paid session start. Returns false for non-internal views.",
+      "x": 1260,
+      "y": 3060,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "payment-not-duplicated",
+      "type": "text",
+      "text": "Payment Not Duplicated\nHandler does not consume pearls, consume scrolls, lookup items, or apply cooldown.",
+      "x": 1820,
+      "y": 3060,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "gui-routing-through-service",
+      "type": "text",
+      "text": "GUI Routing\nTELEPORT_REQUEST_C2S -> TeleportRequestService -> active handler.",
+      "x": 1260,
+      "y": 3260,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "phase-api-07-route-gui-teleport-through-service",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07_ROUTE_GUI_TELEPORT_THROUGH_SERVICE.md",
+      "x": 1820,
+      "y": 3260,
+      "width": 660,
+      "height": 120
+    },
+    {
+      "id": "api07-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07_ROUTE_GUI_TELEPORT_THROUGH_SERVICE_REPORT.md",
+      "x": 2520,
+      "y": 3260,
+      "width": 700,
+      "height": 120
+    },
+    {
+      "id": "gui-payment-preservation",
+      "type": "text",
+      "text": "Payment Preservation\nStaff pearls/cooldown once; scroll shrink once; creative/infinite free.",
+      "x": 1260,
+      "y": 3460,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "gui-manual-validation-pending",
+      "type": "text",
+      "text": "Manual Validation Pending\nFirst gameplay routing phase needs in-game GUI path checks.",
+      "x": 1820,
+      "y": 3460,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "gui-manual-validation",
+      "type": "text",
+      "text": "GUI Manual Validation\nA-H gameplay matrix blocked pending interactive client/world test.",
+      "x": 1260,
+      "y": 3660,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "phase-api-07b-gui-teleport-manual-validation",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07B_GUI_TELEPORT_MANUAL_VALIDATION.md",
+      "x": 1820,
+      "y": 3660,
+      "width": 680,
+      "height": 120
+    },
+    {
+      "id": "api07b-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07B_GUI_TELEPORT_MANUAL_VALIDATION_REPORT.md",
+      "x": 2540,
+      "y": 3660,
+      "width": 700,
+      "height": 120
+    },
+    {
+      "id": "payment-validation-blocked",
+      "type": "text",
+      "text": "Payment Validation\nInventory/cooldown checks not observed in-game yet.",
+      "x": 1260,
+      "y": 3860,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "preview-cleanup-blocked",
+      "type": "text",
+      "text": "Preview Cleanup\nScreen close and success cleanup need in-game observation.",
+      "x": 1820,
+      "y": 3860,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "quick-favorite-smoke-blocked",
+      "type": "text",
+      "text": "Quick Favorite Smoke\nOld path is statically intact; runtime smoke test pending.",
+      "x": 2380,
+      "y": 3860,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "staff-payment-regression",
+      "type": "text",
+      "text": "Staff Payment Regression\nGUI staff route skipped pearls/cooldown by treating broad creativeView as infinite activation.",
+      "x": 1260,
+      "y": 4060,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07C_FIX_GUI_TELEPORT_PAYMENT_REGRESSION.md",
+      "x": 1820,
+      "y": 4060,
+      "width": 720,
+      "height": 120
+    },
+    {
+      "id": "api07c-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07C_FIX_GUI_TELEPORT_PAYMENT_REGRESSION_REPORT.md",
+      "x": 2580,
+      "y": 4060,
+      "width": 760,
+      "height": 120
+    },
+    {
+      "id": "disposable-staff-regression",
+      "type": "text",
+      "text": "Disposable Staff Regression\nBase source has no staff shrink/damage path; runtime item variant still needs validation.",
+      "x": 1260,
+      "y": 4260,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "cooldown-regression-fix",
+      "type": "text",
+      "text": "Cooldown Regression\nService now applies cooldown for regular staff payment plans before handler start.",
+      "x": 1820,
+      "y": 4260,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "pearl-commit-bug",
+      "type": "text",
+      "text": "Pearl Commit Bug\nCooldown applied, but GUI-routed pearl stack mutation needed explicit inventory sync.",
+      "x": 1260,
+      "y": 4460,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "phase-api-07d-fix-gui-payment-commit-resource-consumption",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07D_FIX_GUI_PAYMENT_COMMIT_RESOURCE_CONSUMPTION.md",
+      "x": 1820,
+      "y": 4460,
+      "width": 760,
+      "height": 120
+    },
+    {
+      "id": "api07d-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07D_FIX_GUI_PAYMENT_COMMIT_RESOURCE_CONSUMPTION_REPORT.md",
+      "x": 2620,
+      "y": 4460,
+      "width": 800,
+      "height": 120
+    },
+    {
+      "id": "scroll-commit-bug",
+      "type": "text",
+      "text": "Scroll Commit Bug\nScroll shrink remains in service; inventory sync now follows shrink.",
+      "x": 1260,
+      "y": 4660,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "live-itemstack-mutation",
+      "type": "text",
+      "text": "Live ItemStack Mutation\nPayment plan stores live stack references; no copy() path found.",
+      "x": 1820,
+      "y": 4660,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "staff-cooldown-regression",
+      "type": "text",
+      "text": "Staff Cooldown Regression\nPearls consume, but GUI regular staff cooldown needed old commit order restored.",
+      "x": 1260,
+      "y": 4860,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "phase-api-07e-fix-gui-staff-cooldown-after-payment",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07E_FIX_GUI_STAFF_COOLDOWN_AFTER_PAYMENT.md",
+      "x": 1820,
+      "y": 4860,
+      "width": 760,
+      "height": 120
+    },
+    {
+      "id": "api07e-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07E_FIX_GUI_STAFF_COOLDOWN_AFTER_PAYMENT_REPORT.md",
+      "x": 2620,
+      "y": 4860,
+      "width": 800,
+      "height": 120
+    },
+    {
+      "id": "cooldown-transaction-order",
+      "type": "text",
+      "text": "Cooldown Transaction Order\nValidate, canStart, consume pearls, apply cooldown, sync inventory, start handler.",
+      "x": 1260,
+      "y": 5060,
+      "width": 520,
+      "height": 140
+    },
+    {
+      "id": "runtime-payment-diagnostics",
+      "type": "text",
+      "text": "Runtime Payment Diagnostics\nTemporary [MRP07F] logs trace GUI packet, service, commit, sync, and handler result.",
+      "x": 1260,
+      "y": 5260,
+      "width": 540,
+      "height": 140
+    },
+    {
+      "id": "phase-api-07f-diagnose-gui-payment-commit-runtime-path",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07F_DIAGNOSE_GUI_PAYMENT_COMMIT_RUNTIME_PATH.md",
+      "x": 1840,
+      "y": 5260,
+      "width": 800,
+      "height": 120
+    },
+    {
+      "id": "api07f-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07F_DIAGNOSE_GUI_PAYMENT_COMMIT_RUNTIME_PATH_REPORT.md",
+      "x": 2680,
+      "y": 5260,
+      "width": 820,
+      "height": 120
+    },
+    {
+      "id": "staff-commit-logs",
+      "type": "text",
+      "text": "Staff Commit Logs\nPearl counts, cooldown item/ticks, isOnCooldown before/after addCooldown.",
+      "x": 1260,
+      "y": 5460,
+      "width": 540,
+      "height": 140
+    },
+    {
+      "id": "scroll-commit-logs",
+      "type": "text",
+      "text": "Scroll Commit Logs\nScroll stack item/count before and after shrink(1).",
+      "x": 1840,
+      "y": 5460,
+      "width": 540,
+      "height": 140
+    },
+    {
+      "id": "scroll-consumption-bug-api07g",
+      "type": "text",
+      "text": "Scroll Consumption Bug\nServer now owns GUI scroll mode so scroll-opened waypoint screens route as scroll requests.",
+      "x": 1260,
+      "y": 5660,
+      "width": 440,
+      "height": 120
+    },
+    {
+      "id": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07G_FIX_SCROLL_CONSUMPTION_AND_AUDIT_COOLDOWN_REJOIN_PARITY.md",
+      "x": 1840,
+      "y": 5660,
+      "width": 620,
+      "height": 120
+    },
+    {
+      "id": "api07g-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07G_FIX_SCROLL_CONSUMPTION_AND_AUDIT_COOLDOWN_REJOIN_PARITY_REPORT.md",
+      "x": 2680,
+      "y": 5660,
+      "width": 680,
+      "height": 120
+    },
+    {
+      "id": "cooldown-rejoin-parity-audit",
+      "type": "text",
+      "text": "Cooldown Rejoin Parity Audit\nBackup used vanilla ItemCooldowns only; no persistent cooldown restore path found.",
+      "x": 1260,
+      "y": 5860,
+      "width": 460,
+      "height": 120
+    },
+    {
+      "id": "server-owned-scroll-mode",
+      "type": "text",
+      "text": "Server-Owned Scroll Mode\nOpen screen mode is tracked server-side and preserved across waypoint screen refreshes.",
+      "x": 1840,
+      "y": 5860,
+      "width": 480,
+      "height": 120
+    },
+    {
+      "id": "scroll-runtime-validation-api07h",
+      "type": "text",
+      "text": "Scroll Runtime Validation\nManual validation pending; diagnostics retained until scroll and staff critical paths pass.",
+      "x": 1260,
+      "y": 6060,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "phase-api-07h-validate-scroll-fix-and-diagnostic-cleanup",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07H_VALIDATE_SCROLL_FIX_AND_DIAGNOSTIC_CLEANUP.md",
+      "x": 1840,
+      "y": 6060,
+      "width": 620,
+      "height": 120
+    },
+    {
+      "id": "api07h-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07H_VALIDATE_SCROLL_FIX_AND_DIAGNOSTIC_CLEANUP_REPORT.md",
+      "x": 2680,
+      "y": 6060,
+      "width": 660,
+      "height": 120
+    },
+    {
+      "id": "diagnostic-cleanup-api07h",
+      "type": "text",
+      "text": "Diagnostic Cleanup\n[MRP07F] remains because manual validation did not run in this pass.",
+      "x": 1260,
+      "y": 6260,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "gui-manual-pass-api07i",
+      "type": "text",
+      "text": "GUI Manual Pass\nUser confirmed \u201c\u0434\u0430 \u0432\u0441\u0451 \u043e\u043a\u201d; scroll and staff GUI paths recorded as passing.",
+      "x": 1260,
+      "y": 6460,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "phase-api-07i-record-manual-pass-and-remove-diagnostics",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_07I_RECORD_MANUAL_PASS_AND_REMOVE_DIAGNOSTICS.md",
+      "x": 1840,
+      "y": 6460,
+      "width": 620,
+      "height": 120
+    },
+    {
+      "id": "api07i-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_07I_RECORD_MANUAL_PASS_AND_REMOVE_DIAGNOSTICS_REPORT.md",
+      "x": 2680,
+      "y": 6460,
+      "width": 660,
+      "height": 120
+    },
+    {
+      "id": "diagnostics-removed-api07i",
+      "type": "text",
+      "text": "Diagnostics Removed\nTemporary [MRP07F] logs removed from networking and service source.",
+      "x": 1260,
+      "y": 6660,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "quick-favorite-service-route-api08",
+      "type": "text",
+      "text": "Quick Favorite Service Route\nKeybind route now queues through TeleportRequestService.",
+      "x": 1260,
+      "y": 6860,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "phase-api-08-route-quick-favorite-through-service",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_08_ROUTE_QUICK_FAVORITE_THROUGH_SERVICE.md",
+      "x": 1840,
+      "y": 6860,
+      "width": 620,
+      "height": 120
+    },
+    {
+      "id": "api08-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_08_ROUTE_QUICK_FAVORITE_THROUGH_SERVICE_REPORT.md",
+      "x": 2680,
+      "y": 6860,
+      "width": 660,
+      "height": 120
+    },
+    {
+      "id": "activation-time-payment-api08",
+      "type": "text",
+      "text": "Activation-Time Payment\nPearls, scrolls, and cooldown commit only when delayed activation fires.",
+      "x": 1260,
+      "y": 7060,
+      "width": 500,
+      "height": 120
+    },
+    {
+      "id": "queue-activation-split-api08",
+      "type": "text",
+      "text": "Queue/Activation Split\nManager stores/ticks queue; service validates, pays, and calls handler at activation.",
+      "x": 1840,
+      "y": 7060,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "quick-favorite-manual-validation-api08b",
+      "type": "text",
+      "text": "Quick Favorite Manual Validation\nStatic checks passed; runtime matrix not run in this environment.",
+      "x": 1260,
+      "y": 7260,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "phase-api-08b-quick-favorite-manual-validation",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_08B_QUICK_FAVORITE_MANUAL_VALIDATION.md",
+      "x": 1840,
+      "y": 7260,
+      "width": 620,
+      "height": 120
+    },
+    {
+      "id": "api08b-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_08B_QUICK_FAVORITE_MANUAL_VALIDATION_REPORT.md",
+      "x": 2680,
+      "y": 7260,
+      "width": 680,
+      "height": 120
+    },
+    {
+      "id": "activation-payment-validation-api08b",
+      "type": "text",
+      "text": "Activation-Time Payment Validation\nPending in-game checks for staff pearls/cooldown and scroll consumption.",
+      "x": 1260,
+      "y": 7460,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "gui-regression-smoke-api08b",
+      "type": "text",
+      "text": "GUI Regression Smoke\nPending quick post-route smoke for GUI staff and scroll paths.",
+      "x": 1840,
+      "y": 7460,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "quick-favorite-payment-bug-api08c",
+      "type": "text",
+      "text": "Quick Favorite Payment Bug\nRegular staff could queue as scroll mode when a scroll was also present.",
+      "x": 1260,
+      "y": 7660,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "phase-api-08c-fix-quick-favorite-activation-payment",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_08C_FIX_QUICK_FAVORITE_ACTIVATION_PAYMENT.md",
+      "x": 1840,
+      "y": 7660,
+      "width": 640,
+      "height": 120
+    },
+    {
+      "id": "api08c-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_08C_FIX_QUICK_FAVORITE_ACTIVATION_PAYMENT_REPORT.md",
+      "x": 2700,
+      "y": 7660,
+      "width": 680,
+      "height": 120
+    },
+    {
+      "id": "preferred-activator-queue-mode-api08c",
+      "type": "text",
+      "text": "Preferred Activator Queue Mode\nQueue scroll mode only when scroll is the selected activator after preference order.",
+      "x": 1260,
+      "y": 7860,
+      "width": 540,
+      "height": 120
+    },
+    {
+      "id": "quick-favorite-manual-pass-api08d",
+      "type": "text",
+      "text": "Quick Favorite Manual Pass\nUser confirmed \"\u0434\u0430 \u0432\u0441\u0451 \u043e\u043a\"; quick favorite staff/scroll and GUI smoke recorded as passing.",
+      "x": 1260,
+      "y": 8060,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "phase-api-08d-record-quick-favorite-manual-pass",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_08D_RECORD_QUICK_FAVORITE_MANUAL_PASS.md",
+      "x": 1840,
+      "y": 8060,
+      "width": 640,
+      "height": 120
+    },
+    {
+      "id": "api08d-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_08D_RECORD_QUICK_FAVORITE_MANUAL_PASS_REPORT.md",
+      "x": 2700,
+      "y": 8060,
+      "width": 680,
+      "height": 120
+    },
+    {
+      "id": "preview-hook-next-api08d",
+      "type": "text",
+      "text": "Next: Preview Spark Handler Hook\nQuick favorite service routing is manually validated; preview handler opt-out remains future work.",
+      "x": 1260,
+      "y": 8260,
+      "width": 540,
+      "height": 120
+    },
+    {
+      "id": "preview-spark-handler-hook-api09",
+      "type": "text",
+      "text": "Preview Spark Handler Hook\nActive handler controls whether base MR-Portal emits default preview sparks.",
+      "x": 1260,
+      "y": 8460,
+      "width": 520,
+      "height": 120
+    },
+    {
+      "id": "phase-api-09-preview-spark-handler-hook",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_09_PREVIEW_SPARK_HANDLER_HOOK.md",
+      "x": 1840,
+      "y": 8460,
+      "width": 640,
+      "height": 120
+    },
+    {
+      "id": "api09-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_09_PREVIEW_SPARK_HANDLER_HOOK_REPORT.md",
+      "x": 2700,
+      "y": 8460,
+      "width": 680,
+      "height": 120
+    },
+    {
+      "id": "uses-default-preview-spark-api09",
+      "type": "text",
+      "text": "usesDefaultPreviewSpark\nDefault handler stays true; addon handlers can return false and own visuals.",
+      "x": 1260,
+      "y": 8660,
+      "width": 540,
+      "height": 120
+    },
+    {
+      "id": "default-preview-tracking-api09",
+      "type": "text",
+      "text": "Default Preview Tracking\nGUI and quick favorite removals are gated by whether the base preview was emitted.",
+      "x": 1840,
+      "y": 8660,
+      "width": 560,
+      "height": 120
+    },
+    {
+      "id": "gui-preview-validation-api09b",
+      "type": "text",
+      "text": "GUI Preview Validation\nRuntime validation pending for staff/scroll open, close, and teleport cleanup.",
+      "x": 1260,
+      "y": 8860,
+      "width": 540,
+      "height": 120
+    },
+    {
+      "id": "phase-api-09b-preview-spark-hook-manual-validation",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_09B_PREVIEW_SPARK_HOOK_MANUAL_VALIDATION.md",
+      "x": 1840,
+      "y": 8860,
+      "width": 680,
+      "height": 120
+    },
+    {
+      "id": "api09b-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_09B_PREVIEW_SPARK_HOOK_MANUAL_VALIDATION_REPORT.md",
+      "x": 2700,
+      "y": 8860,
+      "width": 720,
+      "height": 120
+    },
+    {
+      "id": "quick-favorite-preview-validation-api09b",
+      "type": "text",
+      "text": "Quick Favorite Preview Validation\nRuntime validation pending for delayed staff/scroll preview cleanup.",
+      "x": 1260,
+      "y": 9060,
+      "width": 560,
+      "height": 120
+    },
+    {
+      "id": "open-screen-payload-smoke-api09b",
+      "type": "text",
+      "text": "OPEN_SCREEN_S2C Payload Smoke\nStatic server/client payload order matches; runtime packet smoke pending.",
+      "x": 1840,
+      "y": 9060,
+      "width": 560,
+      "height": 120
+    },
+    {
+      "id": "preview-hook-manual-pass-api09c",
+      "type": "text",
+      "text": "Preview Hook Manual Pass\nUser confirmed no crash, GUI opens, preview point appears, and cleanup is OK.",
+      "x": 1260,
+      "y": 9260,
+      "width": 560,
+      "height": 120
+    },
+    {
+      "id": "phase-api-09c-record-preview-spark-hook-manual-pass",
+      "type": "file",
+      "file": "MR-portal/Notes/OBSIDIAN_BOARD/PHASES/PHASE_MRP_API_09C_RECORD_PREVIEW_SPARK_HOOK_MANUAL_PASS.md",
+      "x": 1840,
+      "y": 9260,
+      "width": 720,
+      "height": 120
+    },
+    {
+      "id": "api09c-report",
+      "type": "file",
+      "file": "MR-portal/Notes/REPORTS&AUDITS/PHASE_MRP_API_09C_RECORD_PREVIEW_SPARK_HOOK_MANUAL_PASS_REPORT.md",
+      "x": 2700,
+      "y": 9260,
+      "width": 760,
+      "height": 120
+    },
+    {
+      "id": "chrono-next-root-api09c",
+      "type": "text",
+      "text": "Next Root: Chrono Addon\n/home/mentality/scripts/java_minecraft_mod_prortal_from_mr/Add-ons/Chrono/\nBase reference: ../../MR-portal/",
+      "x": 1260,
+      "y": 9460,
+      "width": 680,
+      "height": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-root-base",
+      "fromNode": "workspace-root",
+      "fromSide": "right",
+      "toNode": "mr-portal-base",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-base-notes",
+      "fromNode": "mr-portal-base",
+      "fromSide": "bottom",
+      "toNode": "base-notes",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-base-api",
+      "fromNode": "mr-portal-base",
+      "fromSide": "right",
+      "toNode": "api-design",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-notes-readme",
+      "fromNode": "base-notes",
+      "fromSide": "right",
+      "toNode": "base-board-readme",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-notes-phases",
+      "fromNode": "base-notes",
+      "fromSide": "right",
+      "toNode": "base-phases",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-phase01",
+      "fromNode": "base-phases",
+      "fromSide": "right",
+      "toNode": "phase-workspace-01",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-phase02",
+      "fromNode": "base-phases",
+      "fromSide": "right",
+      "toNode": "phase-workspace-02",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-notes-reports",
+      "fromNode": "base-notes",
+      "fromSide": "right",
+      "toNode": "base-reports",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-report01",
+      "fromNode": "base-reports",
+      "fromSide": "right",
+      "toNode": "phase01-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-report02",
+      "fromNode": "base-reports",
+      "fromSide": "right",
+      "toNode": "phase02-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-chrono-pointer",
+      "fromNode": "base-notes",
+      "fromSide": "bottom",
+      "toNode": "chrono-pointer",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-phase02-phase04",
+      "fromNode": "phase-workspace-02",
+      "fromSide": "bottom",
+      "toNode": "phase-workspace-04-backup",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-base-backup-folder",
+      "fromNode": "mr-portal-base",
+      "fromSide": "bottom",
+      "toNode": "backup-folder",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-backup-phase04",
+      "fromNode": "backup-folder",
+      "fromSide": "right",
+      "toNode": "phase-workspace-04-backup",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-phase04-report",
+      "fromNode": "phase-workspace-04-backup",
+      "fromSide": "right",
+      "toNode": "phase04-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-phase04-api01",
+      "fromNode": "phase-workspace-04-backup",
+      "fromSide": "bottom",
+      "toNode": "phase-api-01-audit-teleport-flow",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api01-api-design",
+      "fromNode": "phase-api-01-audit-teleport-flow",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api01-report",
+      "fromNode": "phase-api-01-audit-teleport-flow",
+      "fromSide": "right",
+      "toNode": "api01-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-entrypoints-api01",
+      "fromNode": "teleport-entry-points",
+      "fromSide": "right",
+      "toNode": "phase-api-01-audit-teleport-flow",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-payment-quick-risk",
+      "fromNode": "payment-cooldown-ownership",
+      "fromSide": "right",
+      "toNode": "quick-favorite-risk",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-quick-preview-risk",
+      "fromNode": "quick-favorite-risk",
+      "fromSide": "right",
+      "toNode": "preview-spark-lifecycle",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api01-payment",
+      "fromNode": "phase-api-01-audit-teleport-flow",
+      "fromSide": "bottom",
+      "toNode": "payment-cooldown-ownership",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api01-api02",
+      "fromNode": "phase-api-01-audit-teleport-flow",
+      "fromSide": "bottom",
+      "toNode": "phase-api-02-public-handler-api",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api02-api-design",
+      "fromNode": "phase-api-02-public-handler-api",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api02-report",
+      "fromNode": "phase-api-02-public-handler-api",
+      "fromSide": "right",
+      "toNode": "api02-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-mrportalapi-api02",
+      "fromNode": "mrportal-api-class",
+      "fromSide": "right",
+      "toNode": "phase-api-02-public-handler-api",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-handler-context",
+      "fromNode": "teleport-handler-class",
+      "fromSide": "right",
+      "toNode": "teleport-context-class",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-handler-api02",
+      "fromNode": "teleport-handler-class",
+      "fromSide": "top",
+      "toNode": "mrportal-api-class",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api02-build01",
+      "fromNode": "phase-api-02-public-handler-api",
+      "fromSide": "bottom",
+      "toNode": "phase-build-01-java21-gradle-validation",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-build01-api-design",
+      "fromNode": "phase-build-01-java21-gradle-validation",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-build01-report",
+      "fromNode": "phase-build-01-java21-gradle-validation",
+      "fromSide": "right",
+      "toNode": "build01-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-java21-build01",
+      "fromNode": "java21-gradle-runtime",
+      "fromSide": "right",
+      "toNode": "phase-build-01-java21-gradle-validation",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-build01-api03",
+      "fromNode": "phase-build-01-java21-gradle-validation",
+      "fromSide": "bottom",
+      "toNode": "phase-api-03-default-handler-registration",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api02-api03",
+      "fromNode": "phase-api-02-public-handler-api",
+      "fromSide": "bottom",
+      "toNode": "phase-api-03-default-handler-registration",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-default-handler-api03",
+      "fromNode": "default-portal-teleport-handler",
+      "fromSide": "right",
+      "toNode": "phase-api-03-default-handler-registration",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api03-report",
+      "fromNode": "phase-api-03-default-handler-registration",
+      "fromSide": "right",
+      "toNode": "api03-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api03-api-design",
+      "fromNode": "phase-api-03-default-handler-registration",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api03-api04",
+      "fromNode": "phase-api-03-default-handler-registration",
+      "fromSide": "bottom",
+      "toNode": "phase-api-04-teleport-request-service-design",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-service-design-api04",
+      "fromNode": "teleport-request-service-design",
+      "fromSide": "right",
+      "toNode": "phase-api-04-teleport-request-service-design",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api04-report",
+      "fromNode": "phase-api-04-teleport-request-service-design",
+      "fromSide": "right",
+      "toNode": "api04-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api04-api-design",
+      "fromNode": "phase-api-04-teleport-request-service-design",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api04-payment-plan",
+      "fromNode": "phase-api-04-teleport-request-service-design",
+      "fromSide": "bottom",
+      "toNode": "payment-transaction-plan",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-payment-quick-favorite-plan",
+      "fromNode": "payment-transaction-plan",
+      "fromSide": "right",
+      "toNode": "quick-favorite-preservation",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-quick-preview-hook-plan",
+      "fromNode": "quick-favorite-preservation",
+      "fromSide": "right",
+      "toNode": "preview-spark-hook-plan",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api04-api05",
+      "fromNode": "phase-api-04-teleport-request-service-design",
+      "fromSide": "bottom",
+      "toNode": "phase-api-05-request-service-skeleton",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-service-class-api05",
+      "fromNode": "teleport-request-service-class",
+      "fromSide": "right",
+      "toNode": "phase-api-05-request-service-skeleton",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api05-report",
+      "fromNode": "phase-api-05-request-service-skeleton",
+      "fromSide": "right",
+      "toNode": "api05-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api05-api-design",
+      "fromNode": "phase-api-05-request-service-skeleton",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-result-payment-plan",
+      "fromNode": "teleport-request-result-class",
+      "fromSide": "right",
+      "toNode": "teleport-payment-plan-class",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-payment-waypoint-view",
+      "fromNode": "teleport-payment-plan-class",
+      "fromSide": "right",
+      "toNode": "waypoint-data-view-class",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api05-result",
+      "fromNode": "phase-api-05-request-service-skeleton",
+      "fromSide": "bottom",
+      "toNode": "teleport-request-result-class",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api05-api06",
+      "fromNode": "phase-api-05-request-service-skeleton",
+      "fromSide": "bottom",
+      "toNode": "phase-api-06-extract-paid-session-start",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-paid-session-api06",
+      "fromNode": "paid-session-start-method",
+      "fromSide": "right",
+      "toNode": "phase-api-06-extract-paid-session-start",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api06-report",
+      "fromNode": "phase-api-06-extract-paid-session-start",
+      "fromSide": "right",
+      "toNode": "api06-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api06-api-design",
+      "fromNode": "phase-api-06-extract-paid-session-start",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api06-default-handler",
+      "fromNode": "phase-api-06-extract-paid-session-start",
+      "fromSide": "bottom",
+      "toNode": "default-handler-execution",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-default-handler-payment-not-duplicated",
+      "fromNode": "default-handler-execution",
+      "fromSide": "right",
+      "toNode": "payment-not-duplicated",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api06-api07",
+      "fromNode": "phase-api-06-extract-paid-session-start",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07-route-gui-teleport-through-service",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-gui-routing-api07",
+      "fromNode": "gui-routing-through-service",
+      "fromSide": "right",
+      "toNode": "phase-api-07-route-gui-teleport-through-service",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07-report",
+      "fromNode": "phase-api-07-route-gui-teleport-through-service",
+      "fromSide": "right",
+      "toNode": "api07-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07-api-design",
+      "fromNode": "phase-api-07-route-gui-teleport-through-service",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07-payment",
+      "fromNode": "phase-api-07-route-gui-teleport-through-service",
+      "fromSide": "bottom",
+      "toNode": "gui-payment-preservation",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-payment-manual-validation",
+      "fromNode": "gui-payment-preservation",
+      "fromSide": "right",
+      "toNode": "gui-manual-validation-pending",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07-api07b",
+      "fromNode": "phase-api-07-route-gui-teleport-through-service",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07b-gui-teleport-manual-validation",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-gui-manual-validation-api07b",
+      "fromNode": "gui-manual-validation",
+      "fromSide": "right",
+      "toNode": "phase-api-07b-gui-teleport-manual-validation",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07b-report",
+      "fromNode": "phase-api-07b-gui-teleport-manual-validation",
+      "fromSide": "right",
+      "toNode": "api07b-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07b-payment-validation",
+      "fromNode": "phase-api-07b-gui-teleport-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "payment-validation-blocked",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-payment-preview-validation",
+      "fromNode": "payment-validation-blocked",
+      "fromSide": "right",
+      "toNode": "preview-cleanup-blocked",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-preview-quick-smoke",
+      "fromNode": "preview-cleanup-blocked",
+      "fromSide": "right",
+      "toNode": "quick-favorite-smoke-blocked",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07-api07c",
+      "fromNode": "phase-api-07-route-gui-teleport-through-service",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api07b-api07c",
+      "fromNode": "phase-api-07b-gui-teleport-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-staff-regression-api07c",
+      "fromNode": "staff-payment-regression",
+      "fromSide": "right",
+      "toNode": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07c-report",
+      "fromNode": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "fromSide": "right",
+      "toNode": "api07c-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07c-api-design",
+      "fromNode": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07c-disposable-staff",
+      "fromNode": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "fromSide": "bottom",
+      "toNode": "disposable-staff-regression",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-disposable-cooldown-fix",
+      "fromNode": "disposable-staff-regression",
+      "fromSide": "right",
+      "toNode": "cooldown-regression-fix",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07c-api07d",
+      "fromNode": "phase-api-07c-fix-gui-teleport-payment-regression",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07d-fix-gui-payment-commit-resource-consumption",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-pearl-commit-api07d",
+      "fromNode": "pearl-commit-bug",
+      "fromSide": "right",
+      "toNode": "phase-api-07d-fix-gui-payment-commit-resource-consumption",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07d-report",
+      "fromNode": "phase-api-07d-fix-gui-payment-commit-resource-consumption",
+      "fromSide": "right",
+      "toNode": "api07d-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07d-api-design",
+      "fromNode": "phase-api-07d-fix-gui-payment-commit-resource-consumption",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07d-scroll-commit",
+      "fromNode": "phase-api-07d-fix-gui-payment-commit-resource-consumption",
+      "fromSide": "bottom",
+      "toNode": "scroll-commit-bug",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-scroll-live-itemstack",
+      "fromNode": "scroll-commit-bug",
+      "fromSide": "right",
+      "toNode": "live-itemstack-mutation",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07d-api07e",
+      "fromNode": "phase-api-07d-fix-gui-payment-commit-resource-consumption",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07e-fix-gui-staff-cooldown-after-payment",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-staff-cooldown-api07e",
+      "fromNode": "staff-cooldown-regression",
+      "fromSide": "right",
+      "toNode": "phase-api-07e-fix-gui-staff-cooldown-after-payment",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07e-report",
+      "fromNode": "phase-api-07e-fix-gui-staff-cooldown-after-payment",
+      "fromSide": "right",
+      "toNode": "api07e-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07e-api-design",
+      "fromNode": "phase-api-07e-fix-gui-staff-cooldown-after-payment",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07e-cooldown-order",
+      "fromNode": "phase-api-07e-fix-gui-staff-cooldown-after-payment",
+      "fromSide": "bottom",
+      "toNode": "cooldown-transaction-order",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api07e-api07f",
+      "fromNode": "phase-api-07e-fix-gui-staff-cooldown-after-payment",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07f-diagnose-gui-payment-commit-runtime-path",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-runtime-diagnostics-api07f",
+      "fromNode": "runtime-payment-diagnostics",
+      "fromSide": "right",
+      "toNode": "phase-api-07f-diagnose-gui-payment-commit-runtime-path",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07f-report",
+      "fromNode": "phase-api-07f-diagnose-gui-payment-commit-runtime-path",
+      "fromSide": "right",
+      "toNode": "api07f-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07f-api-design",
+      "fromNode": "phase-api-07f-diagnose-gui-payment-commit-runtime-path",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07f-staff-logs",
+      "fromNode": "phase-api-07f-diagnose-gui-payment-commit-runtime-path",
+      "fromSide": "bottom",
+      "toNode": "staff-commit-logs",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-staff-scroll-logs",
+      "fromNode": "staff-commit-logs",
+      "fromSide": "right",
+      "toNode": "scroll-commit-logs",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07f-api07g",
+      "fromNode": "phase-api-07f-diagnose-gui-payment-commit-runtime-path",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-scroll-consumption-api07g",
+      "fromNode": "scroll-consumption-bug-api07g",
+      "fromSide": "right",
+      "toNode": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07g-report",
+      "fromNode": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "fromSide": "right",
+      "toNode": "api07g-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07g-api-design",
+      "fromNode": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07g-cooldown-rejoin",
+      "fromNode": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "fromSide": "bottom",
+      "toNode": "cooldown-rejoin-parity-audit",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api07g-server-scroll-mode",
+      "fromNode": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "fromSide": "bottom",
+      "toNode": "server-owned-scroll-mode",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api07g-api07h",
+      "fromNode": "phase-api-07g-fix-scroll-consumption-and-audit-cooldown-rejoin-parity",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07h-validate-scroll-fix-and-diagnostic-cleanup",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-scroll-runtime-api07h",
+      "fromNode": "scroll-runtime-validation-api07h",
+      "fromSide": "right",
+      "toNode": "phase-api-07h-validate-scroll-fix-and-diagnostic-cleanup",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07h-report",
+      "fromNode": "phase-api-07h-validate-scroll-fix-and-diagnostic-cleanup",
+      "fromSide": "right",
+      "toNode": "api07h-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07h-api-design",
+      "fromNode": "phase-api-07h-validate-scroll-fix-and-diagnostic-cleanup",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07h-diagnostic-cleanup",
+      "fromNode": "phase-api-07h-validate-scroll-fix-and-diagnostic-cleanup",
+      "fromSide": "bottom",
+      "toNode": "diagnostic-cleanup-api07h",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api07h-api07i",
+      "fromNode": "phase-api-07h-validate-scroll-fix-and-diagnostic-cleanup",
+      "fromSide": "bottom",
+      "toNode": "phase-api-07i-record-manual-pass-and-remove-diagnostics",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-gui-manual-pass-api07i",
+      "fromNode": "gui-manual-pass-api07i",
+      "fromSide": "right",
+      "toNode": "phase-api-07i-record-manual-pass-and-remove-diagnostics",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07i-report",
+      "fromNode": "phase-api-07i-record-manual-pass-and-remove-diagnostics",
+      "fromSide": "right",
+      "toNode": "api07i-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api07i-api-design",
+      "fromNode": "phase-api-07i-record-manual-pass-and-remove-diagnostics",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api07i-diagnostics-removed",
+      "fromNode": "phase-api-07i-record-manual-pass-and-remove-diagnostics",
+      "fromSide": "bottom",
+      "toNode": "diagnostics-removed-api07i",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api07i-api08",
+      "fromNode": "phase-api-07i-record-manual-pass-and-remove-diagnostics",
+      "fromSide": "bottom",
+      "toNode": "phase-api-08-route-quick-favorite-through-service",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-quick-favorite-route-api08",
+      "fromNode": "quick-favorite-service-route-api08",
+      "fromSide": "right",
+      "toNode": "phase-api-08-route-quick-favorite-through-service",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08-report",
+      "fromNode": "phase-api-08-route-quick-favorite-through-service",
+      "fromSide": "right",
+      "toNode": "api08-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08-api-design",
+      "fromNode": "phase-api-08-route-quick-favorite-through-service",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api08-activation-payment",
+      "fromNode": "phase-api-08-route-quick-favorite-through-service",
+      "fromSide": "bottom",
+      "toNode": "activation-time-payment-api08",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api08-queue-split",
+      "fromNode": "phase-api-08-route-quick-favorite-through-service",
+      "fromSide": "bottom",
+      "toNode": "queue-activation-split-api08",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api08-api08b",
+      "fromNode": "phase-api-08-route-quick-favorite-through-service",
+      "fromSide": "bottom",
+      "toNode": "phase-api-08b-quick-favorite-manual-validation",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-quick-favorite-manual-api08b",
+      "fromNode": "quick-favorite-manual-validation-api08b",
+      "fromSide": "right",
+      "toNode": "phase-api-08b-quick-favorite-manual-validation",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08b-report",
+      "fromNode": "phase-api-08b-quick-favorite-manual-validation",
+      "fromSide": "right",
+      "toNode": "api08b-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08b-api-design",
+      "fromNode": "phase-api-08b-quick-favorite-manual-validation",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api08b-payment-validation",
+      "fromNode": "phase-api-08b-quick-favorite-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "activation-payment-validation-api08b",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api08b-gui-smoke",
+      "fromNode": "phase-api-08b-quick-favorite-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "gui-regression-smoke-api08b",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api08b-api08c",
+      "fromNode": "phase-api-08b-quick-favorite-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "phase-api-08c-fix-quick-favorite-activation-payment",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-payment-bug-api08c",
+      "fromNode": "quick-favorite-payment-bug-api08c",
+      "fromSide": "right",
+      "toNode": "phase-api-08c-fix-quick-favorite-activation-payment",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08c-report",
+      "fromNode": "phase-api-08c-fix-quick-favorite-activation-payment",
+      "fromSide": "right",
+      "toNode": "api08c-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08c-api-design",
+      "fromNode": "phase-api-08c-fix-quick-favorite-activation-payment",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api08c-queue-mode",
+      "fromNode": "phase-api-08c-fix-quick-favorite-activation-payment",
+      "fromSide": "bottom",
+      "toNode": "preferred-activator-queue-mode-api08c",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api08c-api08d",
+      "fromNode": "phase-api-08c-fix-quick-favorite-activation-payment",
+      "fromSide": "bottom",
+      "toNode": "phase-api-08d-record-quick-favorite-manual-pass",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-quick-favorite-manual-pass-api08d",
+      "fromNode": "quick-favorite-manual-pass-api08d",
+      "fromSide": "right",
+      "toNode": "phase-api-08d-record-quick-favorite-manual-pass",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08d-report",
+      "fromNode": "phase-api-08d-record-quick-favorite-manual-pass",
+      "fromSide": "right",
+      "toNode": "api08d-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api08d-api-design",
+      "fromNode": "phase-api-08d-record-quick-favorite-manual-pass",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api08d-preview-next",
+      "fromNode": "phase-api-08d-record-quick-favorite-manual-pass",
+      "fromSide": "bottom",
+      "toNode": "preview-hook-next-api08d",
+      "toSide": "right"
+    },
+    {
+      "id": "edge-api08d-api09",
+      "fromNode": "phase-api-08d-record-quick-favorite-manual-pass",
+      "fromSide": "bottom",
+      "toNode": "phase-api-09-preview-spark-handler-hook",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-preview-hook-api09",
+      "fromNode": "preview-spark-handler-hook-api09",
+      "fromSide": "right",
+      "toNode": "phase-api-09-preview-spark-handler-hook",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api09-report",
+      "fromNode": "phase-api-09-preview-spark-handler-hook",
+      "fromSide": "right",
+      "toNode": "api09-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api09-api-design",
+      "fromNode": "phase-api-09-preview-spark-handler-hook",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api09-uses-default-preview-spark",
+      "fromNode": "phase-api-09-preview-spark-handler-hook",
+      "fromSide": "bottom",
+      "toNode": "uses-default-preview-spark-api09",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api09-default-preview-tracking",
+      "fromNode": "phase-api-09-preview-spark-handler-hook",
+      "fromSide": "bottom",
+      "toNode": "default-preview-tracking-api09",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api09-api09b",
+      "fromNode": "phase-api-09-preview-spark-handler-hook",
+      "fromSide": "bottom",
+      "toNode": "phase-api-09b-preview-spark-hook-manual-validation",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-gui-preview-api09b",
+      "fromNode": "gui-preview-validation-api09b",
+      "fromSide": "right",
+      "toNode": "phase-api-09b-preview-spark-hook-manual-validation",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api09b-report",
+      "fromNode": "phase-api-09b-preview-spark-hook-manual-validation",
+      "fromSide": "right",
+      "toNode": "api09b-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api09b-api-design",
+      "fromNode": "phase-api-09b-preview-spark-hook-manual-validation",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api09b-quick-preview",
+      "fromNode": "phase-api-09b-preview-spark-hook-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "quick-favorite-preview-validation-api09b",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api09b-open-screen-payload",
+      "fromNode": "phase-api-09b-preview-spark-hook-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "open-screen-payload-smoke-api09b",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-api09b-api09c",
+      "fromNode": "phase-api-09b-preview-spark-hook-manual-validation",
+      "fromSide": "bottom",
+      "toNode": "phase-api-09c-record-preview-spark-hook-manual-pass",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-preview-hook-pass-api09c",
+      "fromNode": "preview-hook-manual-pass-api09c",
+      "fromSide": "right",
+      "toNode": "phase-api-09c-record-preview-spark-hook-manual-pass",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api09c-report",
+      "fromNode": "phase-api-09c-record-preview-spark-hook-manual-pass",
+      "fromSide": "right",
+      "toNode": "api09c-report",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-api09c-api-design",
+      "fromNode": "phase-api-09c-record-preview-spark-hook-manual-pass",
+      "fromSide": "top",
+      "toNode": "api-design",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge-api09c-chrono-next-root",
+      "fromNode": "phase-api-09c-record-preview-spark-hook-manual-pass",
+      "fromSide": "bottom",
+      "toNode": "chrono-next-root-api09c",
+      "toSide": "top"
+    }
+  ]
+}

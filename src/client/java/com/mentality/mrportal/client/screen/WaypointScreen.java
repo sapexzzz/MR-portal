@@ -54,6 +54,8 @@ public class WaypointScreen extends Screen {
 	private Dialog activeDialog = Dialog.NONE;
 	private EditBox dialogNameField;
 	private boolean useScroll;
+	private boolean useDefaultPreviewSpark = true;
+	private boolean defaultPreviewShown;
 
 	public WaypointScreen(boolean creativeView, ResourceKey<Level> currentDimension, List<ResourceKey<Level>> dimensions, List<WaypointData> waypoints, int availablePearls, int requiredPearls, double previewX, double previewY, double previewZ, float previewYaw, float previewScale) {
 		super(ModTranslation.get("screen.mr_portal.title"));
@@ -79,19 +81,37 @@ public class WaypointScreen extends Screen {
 		this.useScroll = useScroll;
 	}
 
+	public void setUseDefaultPreviewSpark(boolean useDefaultPreviewSpark) {
+		this.useDefaultPreviewSpark = useDefaultPreviewSpark;
+	}
+
 	@Override
 	protected void init() {
-		if (this.minecraft != null && this.minecraft.level != null) {
+		if (this.useDefaultPreviewSpark && this.minecraft != null && this.minecraft.level != null) {
 			ClientPortalEffectManager.showPreviewSpark(this.minecraft.level.dimension(), this.previewX, this.previewY, this.previewZ, this.previewYaw, this.previewScale);
+			this.defaultPreviewShown = true;
 		}
 		this.rebuildWidgets();
 	}
 
 	@Override
 	public void onClose() {
-		ClientPortalEffectManager.hidePreviewSpark();
+		this.hideDefaultPreviewIfShown();
 		MRPortalClientNetworking.sendScreenClosed();
 		super.onClose();
+	}
+
+	@Override
+	public void removed() {
+		this.hideDefaultPreviewIfShown();
+		super.removed();
+	}
+
+	private void hideDefaultPreviewIfShown() {
+		if (this.defaultPreviewShown) {
+			ClientPortalEffectManager.hidePreviewSpark();
+			this.defaultPreviewShown = false;
+		}
 	}
 
 	@Override

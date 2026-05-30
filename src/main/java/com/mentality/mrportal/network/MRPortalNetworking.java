@@ -1,11 +1,15 @@
 package com.mentality.mrportal.network;
 
 import com.mentality.mrportal.MRPortal;
+import com.mentality.mrportal.api.MRPortalApi;
+import com.mentality.mrportal.api.MRPortalTeleportHandler;
 import com.mentality.mrportal.config.MRPortalConfig;
 import com.mentality.mrportal.config.MRPortalConfigManager;
 import com.mentality.mrportal.item.MRPortalItems;
 import com.mentality.mrportal.portal.PendingTeleportManager;
 import com.mentality.mrportal.portal.PortalSession;
+import com.mentality.mrportal.portal.TeleportRequestResult;
+import com.mentality.mrportal.portal.TeleportRequestService;
 import com.mentality.mrportal.util.ModTranslation;
 import com.mentality.mrportal.waypoint.ServerWaypointStore;
 import com.mentality.mrportal.waypoint.WaypointData;
@@ -42,6 +46,7 @@ public final class MRPortalNetworking {
 
 	private static final java.util.Map<UUID, Vec3> activePreviewSparks = new java.util.HashMap<>();
 	private static final java.util.Map<UUID, String> activePreviewDimensions = new java.util.HashMap<>();
+	private static final java.util.Map<UUID, Boolean> activeScreenScrollMode = new java.util.HashMap<>();
 
 	private MRPortalNetworking() {
 	}
@@ -67,7 +72,7 @@ public final class MRPortalNetworking {
 					false
 				);
 				store.addWaypoint(player.getUUID(), waypoint);
-				sendWaypointScreen(player, hasCreativeView(player));
+				sendWaypointScreen(player, hasCreativeView(player), isActiveScreenScrollMode(player));
 			});
 		});
 
@@ -75,7 +80,7 @@ public final class MRPortalNetworking {
 			UUID waypointId = buffer.readUUID();
 			server.execute(() -> {
 				ServerWaypointStore.get(server).deleteWaypoint(player.getUUID(), waypointId);
-				sendWaypointScreen(player, hasCreativeView(player));
+				sendWaypointScreen(player, hasCreativeView(player), isActiveScreenScrollMode(player));
 			});
 		});
 
@@ -86,7 +91,7 @@ public final class MRPortalNetworking {
 				ServerWaypointStore store = ServerWaypointStore.get(server);
 				String name = store.normalizeName(player.getUUID(), requestedName);
 				store.renameWaypoint(player.getUUID(), waypointId, name);
-				sendWaypointScreen(player, hasCreativeView(player));
+				sendWaypointScreen(player, hasCreativeView(player), isActiveScreenScrollMode(player));
 			});
 		});
 
@@ -100,39 +105,28 @@ public final class MRPortalNetworking {
 				} else {
 					store.clearFavoriteWaypoint(player.getUUID(), waypointId);
 				}
-				sendWaypointScreen(player, hasCreativeView(player));
+				sendWaypointScreen(player, hasCreativeView(player), isActiveScreenScrollMode(player));
 			});
 		});
 
 		ServerPlayNetworking.registerGlobalReceiver(SCREEN_CLOSED_C2S, (server, player, handler, buffer, responseSender) -> {
-			server.execute(() -> removePreviewSpark(server, player));
+			server.execute(() -> {
+				activeScreenScrollMode.remove(player.getUUID());
+				removeDefaultPreviewSpark(server, player);
+			});
 		});
 
 		ServerPlayNetworking.registerGlobalReceiver(TELEPORT_REQUEST_C2S, (server, player, handler, buffer, responseSender) -> {
 			UUID waypointId = buffer.readUUID();
 			boolean useScroll = buffer.readBoolean();
 			server.execute(() -> {
-				ServerWaypointStore store = ServerWaypointStore.get(server);
-				store.getWaypoint(player.getUUID(), waypointId).ifPresent(waypoint -> {
-					boolean creativeView = hasCreativeView(player);
-					if (!creativeView && !waypoint.dimension().equals(player.serverLevel().dimension())) {
-						player.displayClientMessage(ModTranslation.get("message.mr_portal.same_dimension_only"), true);
-						return;
-					}
-
-					PendingTeleportManager manager = PendingTeleportManager.get(server);
-					if (useScroll && !creativeView) {
-						if (manager.beginScrollTeleport(player, waypoint)) {
-							removePreviewSpark(server, player);
-							player.closeContainer();
-						}
-					} else {
-						if (manager.beginTeleport(player, waypoint, creativeView)) {
-							removePreviewSpark(server, player);
-							player.closeContainer();
-						}
-					}
-				});
+				boolean serverUseScroll = useScroll || isActiveScreenScrollMode(player);
+				TeleportRequestResult result = TeleportRequestService.handleGuiTeleportRequest(server, player, waypointId, serverUseScroll, hasCreativeView(player));
+				if (result.successful()) {
+					activeScreenScrollMode.remove(player.getUUID());
+					removeDefaultPreviewSpark(server, player);
+					player.closeContainer();
+				}
 			});
 		});
 
@@ -153,7 +147,7 @@ public final class MRPortalNetworking {
 					}
 				}
 				if (hasStaff || creativeView) {
-					sendWaypointScreen(player, creativeView);
+					sendWaypointScreen(player, creativeView, false);
 					return;
 				}
 				boolean hasScroll = false;
@@ -170,53 +164,24 @@ public final class MRPortalNetworking {
 					}
 				}
 				if (hasScroll) {
-					sendWaypointScreen(player, false);
+					sendWaypointScreen(player, false, true);
 				}
 			});
 		});
 
 		ServerPlayNetworking.registerGlobalReceiver(QUICK_TELEPORT_BY_KEYBIND_C2S, (server, player, handler, buffer, responseSender) -> {
 			server.execute(() -> {
-				ServerWaypointStore store = ServerWaypointStore.get(server);
-				WaypointData favorite = store.getFavoriteWaypoint(player.getUUID()).orElse(null);
-				if (favorite == null) {
-					player.displayClientMessage(ModTranslation.get("message.mr_portal.favorite_missing"), true);
-					return;
-				}
-
-				PendingTeleportManager manager = PendingTeleportManager.get(server);
-				if (manager.hasActiveSession(player)) {
-					player.displayClientMessage(ModTranslation.get("message.mr_portal.portal_active"), true);
-					return;
-				}
-
-				boolean creativeView = player.getAbilities().instabuild;
-				ItemStack activator = PendingTeleportManager.findPreferredTeleportItem(player);
-				boolean hasInfinite = creativeView || MRPortalItems.isInfinite(activator);
-				boolean hasRegularStaff = activator.is(MRPortalItems.PORTAL_STAFF);
-				boolean hasScroll = MRPortalItems.isTeleportScroll(activator);
-
-				if (!hasInfinite && !favorite.dimension().equals(player.serverLevel().dimension())) {
-					player.displayClientMessage(ModTranslation.get("message.mr_portal.same_dimension_only"), true);
-					return;
-				}
-
-				if (hasInfinite || hasRegularStaff) {
-					manager.queueFavoriteTeleport(player, favorite, hasInfinite, false);
-					return;
-				}
-
-				if (hasScroll) {
-					manager.queueFavoriteTeleport(player, favorite, false, true);
-					return;
-				}
-
-				player.displayClientMessage(ModTranslation.get("message.mr_portal.favorite_item_required"), true);
+				TeleportRequestService.queueQuickFavoriteRequest(server, player);
 			});
 		});
 	}
 
 	public static void sendWaypointScreen(ServerPlayer player, boolean creativeView) {
+		sendWaypointScreen(player, creativeView, false);
+	}
+
+	public static void sendWaypointScreen(ServerPlayer player, boolean creativeView, boolean useScroll) {
+		activeScreenScrollMode.put(player.getUUID(), useScroll);
 		FriendlyByteBuf buffer = PacketByteBufs.create();
 		Vec3 previewPos = PendingTeleportManager.calculateSourcePortalCenter(player, MRPortalConfigManager.get());
 		buffer.writeBoolean(creativeView);
@@ -247,9 +212,19 @@ public final class MRPortalNetworking {
 		buffer.writeDouble(previewPos.z);
 		buffer.writeFloat(player.getYRot());
 		buffer.writeFloat((float) MRPortalConfigManager.get().portalScale);
+		boolean useDefaultPreviewSpark = usesDefaultPreviewSpark();
+		buffer.writeBoolean(useDefaultPreviewSpark);
 
 		ServerPlayNetworking.send(player, OPEN_SCREEN_S2C, buffer);
-		broadcastPreviewSpark(player, previewPos);
+		if (useDefaultPreviewSpark) {
+			broadcastPreviewSpark(player, previewPos);
+		} else {
+			removeDefaultPreviewSpark(player.server, player);
+		}
+	}
+
+	private static boolean isActiveScreenScrollMode(ServerPlayer player) {
+		return activeScreenScrollMode.getOrDefault(player.getUUID(), false);
 	}
 
 	public static void broadcastPortalCreate(MinecraftServer server, PortalSession session) {
@@ -332,7 +307,7 @@ public final class MRPortalNetworking {
 	}
 
 	public static void removeQuickPreviewSpark(MinecraftServer server, ServerPlayer player) {
-		removePreviewSpark(server, player, true);
+		removeDefaultPreviewSpark(server, player, true);
 	}
 
 	private static void broadcastPreviewSpark(ServerPlayer player, Vec3 pos) {
@@ -362,11 +337,16 @@ public final class MRPortalNetworking {
 		}
 	}
 
-	public static void removePreviewSpark(MinecraftServer server, ServerPlayer player) {
-		removePreviewSpark(server, player, false);
+	public static boolean usesDefaultPreviewSpark() {
+		MRPortalTeleportHandler handler = MRPortalApi.getActiveTeleportHandler();
+		return handler == null || handler.usesDefaultPreviewSpark();
 	}
 
-	private static void removePreviewSpark(MinecraftServer server, ServerPlayer player, boolean includeSelf) {
+	public static void removeDefaultPreviewSpark(MinecraftServer server, ServerPlayer player) {
+		removeDefaultPreviewSpark(server, player, false);
+	}
+
+	private static void removeDefaultPreviewSpark(MinecraftServer server, ServerPlayer player, boolean includeSelf) {
 		Vec3 pos = activePreviewSparks.remove(player.getUUID());
 		String dimensionId = activePreviewDimensions.remove(player.getUUID());
 		if (pos == null || dimensionId == null) {

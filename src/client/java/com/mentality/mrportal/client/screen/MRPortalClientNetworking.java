@@ -42,6 +42,7 @@ public final class MRPortalClientNetworking {
 			double previewZ = buffer.readDouble();
 			float previewYaw = buffer.readFloat();
 			float previewScale = buffer.readFloat();
+			boolean useDefaultPreviewSpark = buffer.readBoolean();
 
 			client.execute(() -> {
 				boolean scrollMode = false;
@@ -53,6 +54,7 @@ public final class MRPortalClientNetworking {
 				}
 				WaypointScreen screen = new WaypointScreen(creativeView, currentDimension, dimensions, waypoints, availablePearls, requiredPearls, previewX, previewY, previewZ, previewYaw, previewScale);
 				screen.setUseScroll(scrollMode);
+				screen.setUseDefaultPreviewSpark(useDefaultPreviewSpark);
 				client.setScreen(screen);
 			});
 		});

@@ -99,7 +99,7 @@ public final class PendingTeleportManager {
 			player.getCooldowns().addCooldown(staff.getItem(), config.cooldownSeconds * 20);
 		}
 
-		return startSession(player, destination, infinite, calculateSourcePortalCenter(player, config), player.getYRot(), player.server.getTickCount());
+		return this.startPaidTeleportSession(player, destination, infinite, calculateSourcePortalCenter(player, config), player.getYRot());
 	}
 
 	public boolean beginScrollTeleport(ServerPlayer player, WaypointData destination) {
@@ -116,10 +116,10 @@ public final class PendingTeleportManager {
 
 		scroll.shrink(1);
 		MRPortalConfig config = MRPortalConfigManager.get();
-		return startSession(player, destination, false, calculateSourcePortalCenter(player, config), player.getYRot(), player.server.getTickCount());
+		return this.startPaidTeleportSession(player, destination, false, calculateSourcePortalCenter(player, config), player.getYRot());
 	}
 
-	public boolean queueFavoriteTeleport(ServerPlayer player, WaypointData destination, boolean infinite, boolean useScroll) {
+	public boolean queueFavoriteTeleport(ServerPlayer player, WaypointData destination, boolean infinite, boolean useScroll, boolean defaultPreviewCreated) {
 		if (this.hasActiveSession(player) || this.hasPendingFavoriteActivation(player)) {
 			player.displayClientMessage(ModTranslation.get("message.mr_portal.portal_active"), true);
 			return false;
@@ -135,11 +135,26 @@ public final class PendingTeleportManager {
 			sourcePos,
 			player.getYRot(),
 			player.serverLevel().dimension(),
-			player.server.getTickCount() + config.quickFavoritePortalDelayTicks
+			player.server.getTickCount() + config.quickFavoritePortalDelayTicks,
+			defaultPreviewCreated
 		);
 		this.pendingFavoriteActivations.put(player.getUUID(), activation);
-		MRPortalNetworking.broadcastQuickPreviewSpark(player.server, player, sourcePos);
+		if (defaultPreviewCreated) {
+			MRPortalNetworking.broadcastQuickPreviewSpark(player.server, player, sourcePos);
+		}
 		return true;
+	}
+
+	public boolean startPaidTeleportSession(ServerPlayer player, WaypointData destination, boolean infinite) {
+		MRPortalConfig config = MRPortalConfigManager.get();
+		return this.startPaidTeleportSession(player, destination, infinite, calculateSourcePortalCenter(player, config), player.getYRot());
+	}
+
+	public boolean startPaidTeleportSession(ServerPlayer player, WaypointData destination, boolean infinite, Vec3 sourcePos, float portalYaw) {
+		if (this.hasActiveSession(player)) {
+			return false;
+		}
+		return this.startSession(player, destination, infinite, sourcePos, portalYaw, player.server.getTickCount());
 	}
 
 	private boolean startSession(ServerPlayer player, WaypointData destination, boolean infinite, Vec3 sourcePos, float portalYaw, long createdTick) {
@@ -175,7 +190,7 @@ public final class PendingTeleportManager {
 			ServerPlayer player = server.getPlayerList().getPlayer(activation.playerId());
 			if (player == null || !player.isAlive() || !player.serverLevel().dimension().equals(activation.sourceDimension())) {
 				completedPending.add(activation.playerId());
-				if (player != null) {
+				if (player != null && activation.defaultPreviewCreated()) {
 					MRPortalNetworking.removeQuickPreviewSpark(server, player);
 				}
 				continue;
@@ -185,8 +200,18 @@ public final class PendingTeleportManager {
 				continue;
 			}
 
-			MRPortalNetworking.removeQuickPreviewSpark(server, player);
-			activatePendingFavoriteTeleport(server, player, activation, config);
+			if (activation.defaultPreviewCreated()) {
+				MRPortalNetworking.removeQuickPreviewSpark(server, player);
+			}
+			TeleportRequestService.activateQueuedQuickFavorite(
+				server,
+				player,
+				activation.destination(),
+				activation.infinite(),
+				activation.useScroll(),
+				activation.sourcePos(),
+				activation.portalYaw()
+			);
 			completedPending.add(activation.playerId());
 		}
 
@@ -364,7 +389,7 @@ public final class PendingTeleportManager {
 		return new Vec3(destination.x(), destination.y(), destination.z());
 	}
 
-	private static boolean consumeEnderPearls(Player player, int count) {
+	static boolean consumeEnderPearls(Player player, int count) {
 		int available = countEnderPearls(player);
 		if (available < count) {
 			return false;
@@ -385,7 +410,7 @@ public final class PendingTeleportManager {
 		return true;
 	}
 
-	private static ItemStack findPortalStaff(Player player) {
+	static ItemStack findPortalStaff(Player player) {
 		for (InteractionHand hand : InteractionHand.values()) {
 			ItemStack stack = player.getItemInHand(hand);
 			if (MRPortalItems.isPortalStaff(stack)) {
@@ -427,7 +452,7 @@ public final class PendingTeleportManager {
 		return ItemStack.EMPTY;
 	}
 
-	private static ItemStack findTeleportScroll(Player player) {
+	static ItemStack findTeleportScroll(Player player) {
 		for (InteractionHand hand : InteractionHand.values()) {
 			ItemStack stack = player.getItemInHand(hand);
 			if (MRPortalItems.isTeleportScroll(stack)) {
@@ -442,48 +467,6 @@ public final class PendingTeleportManager {
 		return ItemStack.EMPTY;
 	}
 
-	private void activatePendingFavoriteTeleport(MinecraftServer server, ServerPlayer player, PendingFavoriteActivation activation, MRPortalConfig config) {
-		if (this.hasActiveSession(player)) {
-			player.displayClientMessage(ModTranslation.get("message.mr_portal.portal_active"), true);
-			return;
-		}
-		if (!activation.infinite() && !player.getAbilities().instabuild && !activation.destination().dimension().equals(player.serverLevel().dimension())) {
-			player.displayClientMessage(ModTranslation.get("message.mr_portal.same_dimension_only"), true);
-			return;
-		}
-
-		if (activation.useScroll()) {
-			ItemStack scroll = findTeleportScroll(player);
-			if (scroll.isEmpty()) {
-				player.displayClientMessage(ModTranslation.get("message.mr_portal.favorite_item_required"), true);
-				return;
-			}
-			scroll.shrink(1);
-			startSession(player, activation.destination(), false, activation.sourcePos(), activation.portalYaw(), server.getTickCount());
-			return;
-		}
-
-		int pearlCost = getRequiredPearls(activation.infinite() || player.getAbilities().instabuild);
-		if (!activation.infinite() && !player.getAbilities().instabuild) {
-			ItemStack staff = findPortalStaff(player);
-			if (staff.isEmpty()) {
-				player.displayClientMessage(ModTranslation.get("message.mr_portal.favorite_item_required"), true);
-				return;
-			}
-			if (player.getCooldowns().isOnCooldown(staff.getItem())) {
-				player.displayClientMessage(ModTranslation.get("message.mr_portal.cooldown_active"), true);
-				return;
-			}
-			if (!consumeEnderPearls(player, pearlCost)) {
-				player.displayClientMessage(ModTranslation.get("message.mr_portal.not_enough_pearls", pearlCost), true);
-				return;
-			}
-			player.getCooldowns().addCooldown(staff.getItem(), config.cooldownSeconds * 20);
-		}
-
-		startSession(player, activation.destination(), activation.infinite(), activation.sourcePos(), activation.portalYaw(), server.getTickCount());
-	}
-
 	private record PendingFavoriteActivation(
 		UUID playerId,
 		WaypointData destination,
@@ -492,6 +475,7 @@ public final class PendingTeleportManager {
 		Vec3 sourcePos,
 		float portalYaw,
 		net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> sourceDimension,
-		long activateTick
+		long activateTick,
+		boolean defaultPreviewCreated
 	) {}
 }
